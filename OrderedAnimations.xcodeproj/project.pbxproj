@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		660399411E5BE7BA00166EB8 /* OrderedAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 6603993F1E5BE7BA00166EB8 /* OrderedAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		660399481E5BE7CD00166EB8 /* OrderedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660399471E5BE7CD00166EB8 /* OrderedAnimation.swift */; };
+		6603994F1E5BECD600166EB8 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6603994E1E5BECD600166EB8 /* AsyncOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6603993C1E5BE7BA00166EB8 /* OrderedAnimations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OrderedAnimations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6603993F1E5BE7BA00166EB8 /* OrderedAnimations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderedAnimations.h; sourceTree = "<group>"; };
 		660399401E5BE7BA00166EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		660399471E5BE7CD00166EB8 /* OrderedAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedAnimation.swift; sourceTree = "<group>"; };
+		6603994E1E5BECD600166EB8 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				6603993F1E5BE7BA00166EB8 /* OrderedAnimations.h */,
 				660399401E5BE7BA00166EB8 /* Info.plist */,
+				660399471E5BE7CD00166EB8 /* OrderedAnimation.swift */,
+				6603994E1E5BECD600166EB8 /* AsyncOperation.swift */,
 			);
 			path = OrderedAnimations;
 			sourceTree = "<group>";
@@ -96,6 +102,7 @@
 					6603993B1E5BE7B900166EB8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = U89TQVVL6R;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6603994F1E5BECD600166EB8 /* AsyncOperation.swift in Sources */,
+				660399481E5BE7CD00166EB8 /* OrderedAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +249,7 @@
 		660399451E5BE7BA00166EB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = U89TQVVL6R;
@@ -252,6 +262,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brandonskane.OrderedAnimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -259,6 +270,7 @@
 		660399461E5BE7BA00166EB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = U89TQVVL6R;
