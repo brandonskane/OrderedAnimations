@@ -1,8 +1,8 @@
-OrderedOperations is an easy way to make animations occur in an FIFO serial manner. You don't need to deal with completion blocks or calculate delays. 
+OrderedOperations is an easy way to make animations occur in an serial FIFO queue. You don't need to deal with completion blocks or calculate delays. 
 
 Example:
 
-The follow will complete in a total of 8 seconds
+The follow will complete in a total of 6.5 seconds
 
 ```swift
 let orderedAnimations = OrderedAnimation()
@@ -13,13 +13,25 @@ orderedAnimations.addAnimation(duration: 1.0, options: [.curveEaseInOut, .allowU
     //animation
 }
 orderedAnimations.addWait(duration: 2.0) //wait 2 seconds until the next one starts
-orderedAnimations.addAnimation(duration: 3.0) { 
+orderedAnimations.addSpringAnimation(duration: 1.5, options: .curveEaseInOut, damping: 0.9, springVelocity: 0.3) { 
     //animation
 }
 orderedAnimations.addCompletion {
     //the animations added before this completion are completed
     //can handle some completed state here.
 }
+```
+
+Example
+
+![](http://i.imgur.com/z7RgZjV.gif)
+
+Other
+
+```sw
+clearRemainingAnimations() //will clear all animations that haven't started yet
+pauseUnrunAnimations() //will prevent all unstarted animations from starting
+resumeUnrunAnimations() //will resume previously unstarted & paused animations
 ```
 
 

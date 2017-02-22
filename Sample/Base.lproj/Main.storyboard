@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs4-Gc-MFG">
+                                <rect key="frame" x="163" y="36" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.61568627450000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XRa-LB-5Ju"/>
+                                    <constraint firstAttribute="width" constant="50" id="yJB-03-cwq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWN-fh-iR1">
+                                <rect key="frame" x="16" y="179" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="u3X-Dc-6kn"/>
+                                </constraints>
+                                <state key="normal" title="Down"/>
+                                <connections>
+                                    <action selector="down:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lII-7o-bdN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl3-m2-bqa">
+                                <rect key="frame" x="0.0" y="217" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TuN-lT-Hrg"/>
+                                </constraints>
+                                <state key="normal" title="Up"/>
+                                <connections>
+                                    <action selector="up:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N0R-Nw-bLk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKY-7C-RNr">
+                                <rect key="frame" x="16" y="255" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iFX-3O-D9e"/>
+                                </constraints>
+                                <state key="normal" title="Clear Unrun Animations"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xn0-n4-5Pd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOe-VM-410">
+                                <rect key="frame" x="16" y="285" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="35p-mc-Edj"/>
+                                </constraints>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gNz-CU-Kxn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sG0-2a-Q2G">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SYL-UE-8rH"/>
+                                </constraints>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <action selector="resume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEc-JN-PIk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EOe-VM-410" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="3dA-1c-ELd"/>
+                            <constraint firstAttribute="trailing" secondItem="IKY-7C-RNr" secondAttribute="trailing" constant="16" id="9er-eL-ITh"/>
+                            <constraint firstItem="vl3-m2-bqa" firstAttribute="top" secondItem="RWN-fh-iR1" secondAttribute="bottom" constant="8" id="CEX-Xq-HMZ"/>
+                            <constraint firstAttribute="trailing" secondItem="vl3-m2-bqa" secondAttribute="trailing" id="Fng-0S-Xai"/>
+                            <constraint firstItem="sG0-2a-Q2G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="JBg-fy-TqF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RWN-fh-iR1" secondAttribute="trailing" id="Jeb-wg-5nK"/>
+                            <constraint firstItem="vl3-m2-bqa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P7o-5t-kRJ"/>
+                            <constraint firstAttribute="trailing" secondItem="EOe-VM-410" secondAttribute="trailing" constant="16" id="RSJ-zv-8XU"/>
+                            <constraint firstItem="bs4-Gc-MFG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="b9Z-J8-NqZ"/>
+                            <constraint firstItem="sG0-2a-Q2G" firstAttribute="top" secondItem="EOe-VM-410" secondAttribute="bottom" constant="3" id="c4u-6Z-QO8"/>
+                            <constraint firstAttribute="trailing" secondItem="sG0-2a-Q2G" secondAttribute="trailing" constant="16" id="fHp-Jr-aLt"/>
+                            <constraint firstItem="IKY-7C-RNr" firstAttribute="top" secondItem="vl3-m2-bqa" secondAttribute="bottom" constant="8" id="gQw-X7-G1B"/>
+                            <constraint firstItem="RWN-fh-iR1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="159" id="gen-Jd-M0j"/>
+                            <constraint firstItem="EOe-VM-410" firstAttribute="top" secondItem="IKY-7C-RNr" secondAttribute="bottom" id="oT2-s1-d50"/>
+                            <constraint firstItem="bs4-Gc-MFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qir-tx-laH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="RWN-fh-iR1" secondAttribute="leading" id="uQP-Ow-z6O"/>
+                            <constraint firstItem="IKY-7C-RNr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="wEu-Hw-Xd6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="boxView" destination="bs4-Gc-MFG" id="xU4-HB-wfi"/>
+                        <outlet property="topConstraint" destination="b9Z-J8-NqZ" id="42f-Tg-KpC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
