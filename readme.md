@@ -38,7 +38,7 @@ resumeUnrunAnimations() //will resume previously unstarted & paused animations
 
 # Carthage
 
-`github brandonskane/OrderedAnimations`
+`github "brandonskane/OrderedAnimations"`
 
 ## Use Cases
 
