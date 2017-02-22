@@ -2,7 +2,7 @@ OrderedOperations is an easy way to make animations occur in an serial FIFO queu
 
 Example:
 
-The follow will complete in a total of 6.5 seconds
+The below will complete in a total of 6.5 seconds
 
 ```swift
 let orderedAnimations = OrderedAnimation()
@@ -35,6 +35,10 @@ resumeUnrunAnimations() //will resume previously unstarted & paused animations
 ```
 
 
+
+# Carthage
+
+`github brandonskane/OrderedAnimations`
 
 ## Use Cases
 
