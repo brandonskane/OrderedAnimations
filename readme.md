@@ -1,4 +1,4 @@
-OrderedOperations is an easy way to make animations occur in an serial FIFO queue. You don't need to deal with completion blocks or calculate delays. 
+OrderedAnimations is an easy way to make animations occur in an serial FIFO queue. You don't need to deal with completion blocks or calculate delays. 
 
 Example:
 
