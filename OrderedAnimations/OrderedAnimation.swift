@@ -88,8 +88,7 @@ class AnimationOperation: AsyncOperation {
         self.duration = duration
         if let options = options {
             self.options = options
-        }
-        else {
+        } else {
             self.options = []
         }
         super.init()
@@ -121,8 +120,7 @@ class SpringAnimationOperation: AsyncOperation {
         self.duration = duration
         if let options = options {
             self.options = options
-        }
-        else {
+        } else {
             self.options = []
         }
         self.damping = damping
