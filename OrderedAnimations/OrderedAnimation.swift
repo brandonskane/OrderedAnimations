@@ -11,22 +11,22 @@ import UIKit
 
 public typealias Handler = () -> ()
 
-public class OrderedAnimation: NSObject {
+open class OrderedAnimation: NSObject {
     
-    private let operationQueue = OperationQueue()
+    fileprivate let operationQueue = OperationQueue()
     
     public override init() {
         super.init()
         operationQueue.maxConcurrentOperationCount = 1
     }
     
-    public func addAnimation(duration: TimeInterval, options: UIViewAnimationOptions? = nil, animation: @escaping Handler) {
+    open func addAnimation(duration: TimeInterval, options: UIViewAnimationOptions? = nil, animation: @escaping Handler) {
         operationQueue.addOperation(AnimationOperation(duration: duration,
                                                        options: options,
                                                        animation: animation))
     }
     
-    public func addSpringAnimation(duration: TimeInterval, options: UIViewAnimationOptions? = nil, damping: CGFloat, springVelocity: CGFloat, animation: @escaping Handler) {
+    open func addSpringAnimation(duration: TimeInterval, options: UIViewAnimationOptions? = nil, damping: CGFloat, springVelocity: CGFloat, animation: @escaping Handler) {
         operationQueue.addOperation(SpringAnimationOperation(duration: duration,
                                                              options: options,
                                                              damping: damping,
@@ -34,7 +34,7 @@ public class OrderedAnimation: NSObject {
                                                              animation: animation))
     }
     
-    public func addCompletion(animationComplete: @escaping Handler) {
+    open func addCompletion(_ animationComplete: @escaping Handler) {
         let completionOperation = BlockOperation()
         completionOperation.addExecutionBlock {
             guard !completionOperation.isCancelled else { return }
@@ -43,20 +43,20 @@ public class OrderedAnimation: NSObject {
         operationQueue.addOperation(completionOperation)
     }
     
-    public func addWait(duration: TimeInterval) {
+    open func addWait(_ duration: TimeInterval) {
         operationQueue.addOperation(WaitOperation(waitDuration: duration))
     }
     
-    public func clearRemainingAnimations() {
+    open func clearRemainingAnimations() {
         guard operationQueue.operations.count > 0 else { return }
         operationQueue.cancelAllOperations()
     }
     
-    public func pauseUnrunAnimations() {
+    open func pauseUnrunAnimations() {
         operationQueue.isSuspended = true
     }
     
-    public func resumeUnrunAnimations() {
+    open func resumeUnrunAnimations() {
         operationQueue.isSuspended = false
     }
 }

@@ -162,6 +162,7 @@
 					660399561E5D287B00166EB8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = U89TQVVL6R;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -433,6 +434,7 @@
 				660399461E5BE7BA00166EB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		660399661E5D287B00166EB8 /* Build configuration list for PBXNativeTarget "Sample" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +443,7 @@
 				660399681E5D287B00166EB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
