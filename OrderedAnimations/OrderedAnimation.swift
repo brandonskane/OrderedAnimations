@@ -20,13 +20,13 @@ open class OrderedAnimation: NSObject {
         operationQueue.maxConcurrentOperationCount = 1
     }
     
-    open func addAnimation(duration: TimeInterval, options: UIViewAnimationOptions? = nil, animation: @escaping Handler) {
+    open func addAnimation(duration: TimeInterval, options: UIView.AnimationOptions? = nil, animation: @escaping Handler) {
         operationQueue.addOperation(AnimationOperation(duration: duration,
                                                        options: options,
                                                        animation: animation))
     }
     
-    open func addSpringAnimation(duration: TimeInterval, options: UIViewAnimationOptions? = nil, damping: CGFloat, springVelocity: CGFloat, animation: @escaping Handler) {
+    open func addSpringAnimation(duration: TimeInterval, options: UIView.AnimationOptions? = nil, damping: CGFloat, springVelocity: CGFloat, animation: @escaping Handler) {
         operationQueue.addOperation(SpringAnimationOperation(duration: duration,
                                                              options: options,
                                                              damping: damping,
@@ -81,9 +81,9 @@ class AnimationOperation: AsyncOperation {
     
     var animation: Handler
     var duration: TimeInterval
-    var options: UIViewAnimationOptions
+    var options: UIView.AnimationOptions
     
-    init(duration: TimeInterval, options: UIViewAnimationOptions? = nil, animation: @escaping () -> ()) {
+    init(duration: TimeInterval, options: UIView.AnimationOptions? = nil, animation: @escaping () -> ()) {
         self.animation = animation
         self.duration = duration
         if let options = options {
@@ -111,11 +111,14 @@ class SpringAnimationOperation: AsyncOperation {
     
     var animation: Handler
     var duration: TimeInterval
-    var options: UIViewAnimationOptions
+    var options: UIView.AnimationOptions
     var damping: CGFloat
     var springVelocity: CGFloat
     
-    init(duration: TimeInterval, options: UIViewAnimationOptions? = nil, damping: CGFloat, springVelocity: CGFloat, animation: @escaping () -> ()) {
+    init(duration: TimeInterval, options: UIView.AnimationOptions? = nil,
+         damping: CGFloat,
+         springVelocity: CGFloat,
+         animation: @escaping () -> ()) {
         self.animation = animation
         self.duration = duration
         if let options = options {
